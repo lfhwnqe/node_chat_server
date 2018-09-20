@@ -43,7 +43,8 @@ $(document).ready(() => {
     })
 
     socket.on('message', message => {
-        const newElement = $('<div></div>').text(message.text)
+        // const newElement = $('<div></div>').text(message.text)
+        const newElement = `<div>${message.text}</div>`
         $('#messages').append(newElement)
     })
 
